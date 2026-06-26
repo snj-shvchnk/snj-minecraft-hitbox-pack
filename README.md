@@ -79,8 +79,11 @@ Run the script, open Minecraft Bedrock, then hold the Back side mouse button. In
 
 Current timing:
 
-- click hold duration: `8-16 ms`
-- interval between clicks: `40-60 ms`
+- click hold duration: `6-10 ms`
+- interval between clicks: `90-120 ms`
+- effective rate: roughly `8-10 CPS`
+
+The timing is intentionally below the previous faster setting to reduce input queue pressure and avoid occasional camera-look stalls during combat.
 
 The normal left mouse button is not intercepted and continues to work directly.
 

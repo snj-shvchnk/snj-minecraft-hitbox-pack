@@ -7,6 +7,10 @@ SetMouseDelay -1
 
 minecraftExe := "Minecraft.Windows.exe"
 clickerEnabled := false
+clickHoldMinMs := 6
+clickHoldMaxMs := 10
+clickIntervalMinMs := 90
+clickIntervalMaxMs := 120
 
 #HotIf IsMinecraftActive()
 
@@ -31,7 +35,7 @@ $XButton1 Up::
 
 DoClick()
 {
-    global clickerEnabled
+    global clickerEnabled, clickHoldMinMs, clickHoldMaxMs, clickIntervalMinMs, clickIntervalMaxMs
 
     if !clickerEnabled
         return
@@ -42,11 +46,11 @@ DoClick()
     }
 
     SendEvent "{LButton down}"
-    Sleep Random(8, 16)
+    Sleep Random(clickHoldMinMs, clickHoldMaxMs)
     SendEvent "{LButton up}"
 
     if clickerEnabled
-        SetTimer DoClick, -Random(40, 60)
+        SetTimer DoClick, -Random(clickIntervalMinMs, clickIntervalMaxMs)
 }
 
 Watchdog()
