@@ -10,7 +10,7 @@ clickerEnabled := false
 
 #HotIf IsMinecraftActive()
 
-$MButton::
+$XButton1::
 {
     global clickerEnabled
 
@@ -22,7 +22,7 @@ $MButton::
     DoClick()
 }
 
-$MButton Up::
+$XButton1 Up::
 {
     StopClicker()
 }
@@ -36,7 +36,7 @@ DoClick()
     if !clickerEnabled
         return
 
-    if !IsMinecraftActive() || !GetKeyState("MButton", "P") {
+    if !IsMinecraftActive() || !GetKeyState("XButton1", "P") {
         StopClicker()
         return
     }
@@ -51,7 +51,7 @@ DoClick()
 
 Watchdog()
 {
-    if !IsMinecraftActive() || !GetKeyState("MButton", "P")
+    if !IsMinecraftActive() || !GetKeyState("XButton1", "P")
         StopClicker()
 }
 

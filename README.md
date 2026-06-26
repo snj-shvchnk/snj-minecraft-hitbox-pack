@@ -4,7 +4,7 @@ Client-side tooling for Minecraft Bedrock on Windows:
 
 - `SnjHitboxPack.mcpack` adds a green player hitbox overlay.
 - `SnjHitboxPack/` contains the editable resource pack source files.
-- `minecraft_clicker.ahk` is an optional AutoHotkey helper that repeatedly sends left-click input while the middle mouse button is held.
+- `minecraft_clicker.ahk` is an optional AutoHotkey helper that repeatedly sends left-click input while the Back side mouse button is held.
 
 ## What The Hitbox Pack Does
 
@@ -75,7 +75,7 @@ minecraft_clicker.ahk
 https://www.autohotkey.com/
 ```
 
-Run the script, open Minecraft Bedrock, then hold the middle mouse button. While Minecraft is active and the middle mouse button is held, the script sends repeated left-click input with randomized timing.
+Run the script, open Minecraft Bedrock, then hold the Back side mouse button. In AutoHotkey this button is `XButton1`; in browsers it usually acts as the Back button. While Minecraft is active and `XButton1` is held, the script sends repeated left-click input with randomized timing.
 
 Current timing:
 
@@ -84,7 +84,7 @@ Current timing:
 
 The normal left mouse button is not intercepted and continues to work directly.
 
-The script includes a watchdog that stops clicking if Minecraft loses focus, closes, or the middle mouse button is released.
+The script includes a watchdog that stops clicking if Minecraft loses focus, closes, or `XButton1` is released.
 
 ## Notes For Servers
 
